@@ -1,0 +1,226 @@
+body{
+    font-family: 'Outfit', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Spartan', sans-serif;
+    margin:0;
+    font-size: 15px;
+}
+
+/* Start Golbal Ruels */
+
+:root{
+    --main-color: hsl(303, 10%, 53%);
+    --secondary-color: hsl(300, 24%, 96%);
+    --white-color: hsl(0, 0%, 100%);
+    --pink-color: hsl(333, 80%, 67%);
+    --dark-magntena: hsl(300, 43%, 22%);
+}
+
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* End Golbal Rules */
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px){
+    .container {
+        width: 750px;
+        margin: 0;
+    }
+}
+
+/* small = 750px */
+
+/* Medium */
+
+@media (min-width:992px) {
+    .container{
+        width: 970px;
+    }
+}
+
+/* Large */
+
+@media (min-width:1200px) {
+    .container{
+        width: 1170px;
+    }
+}
+
+/* large = 1170px */
+/* Start Header */
+
+.container .head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .head .h1-p{
+    width: 330px;
+    margin: 50px 50px 0;
+}
+
+.head .h1-p h1{
+    margin-bottom: 20px;
+    color: var(--dark-magntena);
+    font-size: 40px;
+}
+
+@media (max-width:768px){
+    .head .h1-p h1{
+        padding-right: 15px;
+        padding-left: 15px;
+        font-size: 30px;
+    }
+}
+
+.head .h1-p p {
+    line-height: 1.8;
+    color: var(--main-color);
+}
+
+.aside {
+    margin-top: 50px;
+}
+
+.aside .first ,
+.aside .second ,
+.aside .third {
+    display: flex;
+    padding: 20px;
+    margin-top: 15px;
+    align-items: center;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+}
+
+.aside .first{
+    width: 500px;
+}
+
+.aside .second {
+    width: 500px;
+    margin-left: 50px;
+}
+
+.aside .third {
+    width: 500px;
+    margin-left: 80px;
+}
+
+.aside i {
+    margin: 10px 5px;
+    color:goldenrod;
+}
+
+.aside p {
+    margin-left: 20px;
+    font-weight: bold;
+    color: var(--dark-magntena);
+}
+
+@media (max-width:768px){
+    .head{
+        flex-direction: column;
+    }
+    .head .h1-p {
+        text-align: center;
+    }
+    .aside .first ,
+    .aside .second ,
+    .aside .third {
+        display: block;
+        width: auto;
+        margin-left: 0;
+        text-align: center;
+    }
+    .aside p{
+        margin:0;
+    }
+    .head .h1-p p {
+        padding: 0 3px;
+    }
+}
+
+/* End Header */
+/* Start Footer */
+
+.footer{
+    display: grid;
+    margin-top: 100px;
+    margin-left: 50px;
+    grid-template-areas: 
+    "card1 card1 card2 card2 card3 card3";
+    column-gap: 30px;
+}
+
+.card1 {
+    grid-area: card1;
+}
+
+.card2 {
+    grid-area: card2;
+}
+
+.card3 {
+    grid-area: card3;
+}
+
+.footer .text {
+    display: flex;
+}
+
+.footer .card1,
+.footer .card2,
+.footer .card3{
+    background-color: var(--dark-magntena);
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.text .image img{
+    border-radius: 50%;
+    width: 40px;
+    margin: 0 20px 20px 0;
+}
+
+.footer .text .info h4{
+    color: white;
+}
+
+.footer .text .info h4 + p{
+    color: var(--pink-color);
+}
+
+.footer .white{
+    color: var(--white-color);
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+.footer .card1{
+    margin-bottom: 40px;
+}
+
+.footer .card2{
+    margin-top:20px;
+}
+
+.footer .card3{
+    margin-top: 40px;
+}
+
+/* End Footer */
